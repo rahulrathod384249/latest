@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GOLD PRICE PREDICTOR</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+        <body  class="fluid-container bg-dark text-white main_container mw-100">
+            <div  class="text-center text-warning "><H1 class="mt-5">GOLD PRICE PREDICTOR</H1></div>
+            <form name="form", method="POST", style="text-align: center;">
+            <br><h5>SPX: </h5><input type="number"  step="any" name="SPX", placeholder="Enter SPX" required/><br>
+               <br><h5>USO:</h5> <input type="number" step = "any" name="USO", placeholder="Enter USO" required/><br>
+                <br><h5>SLV:</h5> <input type="number" step = "any" name="SLV", placeholder="Enter SLV" required/><br>
+               <br><h5> EUR: </h5><input type="text" step = "any" name="EUR", placeholder="Enter EUR" required/> <br>
+                <button class="m-5 btn btn-warning" value="Submit">Predict Gold Price</button>
+            </form>
+            {% if output %}
+            <p style="text-align: center;" class="text-warning h5"> Predicted Gold Price is :{{output[0]}} USD </p>
+            {%endif%}
+        </body>
+</html>
